@@ -42,8 +42,9 @@ header{
     background-color: transparent;
     position: fixed;
     z-index: 1000;
+    background-color: rgb(255, 255, 255);
 }
-header::before{
+/* header::before{
     content: '';
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -52,7 +53,7 @@ header::before{
     height: 100%;
     width: 100%;
     z-index: -1;
-}
+} */
 nav{
     height: 70px;
     position: relative;
@@ -71,9 +72,9 @@ nav{
     border: none;
     background-color: #fce687;
     font-size: 3rem;
-    margin: 0%;
+    margin: 0px 0px;
     width: 40px;
-    height: 40px;
+    height: 35px;
     display: none;
     color: var(--GrayColor);
     border-radius: 5px;
@@ -203,7 +204,7 @@ nav{
     padding: 1px 0px 0px 0px;
 }
 .home, .about, .services, .skills, .projects, .contact{
-    margin: 11px 0px;
+    margin: 14px 0px;
 }
 .home{
     width: 100%;
@@ -400,15 +401,18 @@ nav{
 
 /* Smartphones Mobile Medium*/
 @media only screen and (max-width: 375px) {
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #navbar{
+        width: 90% !important;
+    }
+    .logo{
+        margin-top: 5px;
+    }
     .logo img{
         width: 40px;
-    }
-    .logo h1{
-        height: 34px;
-        font-size: 3.4rem;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 700;
-        color: var(--GrayColor);
     }
     .navigation{
         display: none;
@@ -418,9 +422,10 @@ nav{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 5px;
     }
-    .resume{
-        font-size: 1.4rem;
+    .logo{
+        margin-top: 5px;
     }
     .sidebar{
         width: 210px;
@@ -456,25 +461,28 @@ nav{
 
 /* Smartphones Mobile Large*/
 @media(min-width: 376px) and (max-width: 500px) {
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #navbar{
+        width: 90%;
+    }
     .logo img{
         width: 40px;
-    }
-    .logo h1{
-        height: 34px;
-        font-size: 3.4rem;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 700;
-        color: var(--GrayColor);
     }
     .navigation{
         display: none;
     }
     .menu-icon{
         display: block;
-        margin-top: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
     }
-    .resume{
-        font-size: 1.4rem;
+    .logo{
+        margin-top: 5px;
     }
     .sidebar{
         width: 210px;
@@ -527,6 +535,9 @@ nav{
         justify-content: center;
         align-items: center;
     }
+    .logo{
+        margin-top: 5px;
+    }
     .sidebar{
         width: 240px;
     }
@@ -551,12 +562,25 @@ nav{
      .navigation{
         display: none;
     }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #navbar{
+        width: 94%;
+    }
     .menu-icon{
         display: block;
-        margin-left: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: none;
+        font-size: 2.9rem;
+        width: 35px;
+        height: 35px;
+    }
+    .logo{
+        margin-top: 5px;
     }
     .sidebar{
         width: 240px;

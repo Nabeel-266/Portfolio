@@ -2,6 +2,9 @@
     width: 100vw;
     height: 1000px;
 }
+body{
+
+}
 #main{
     background-color: var(--WhiteColor);
     width: 100vw;
@@ -249,20 +252,233 @@
 
 /* Smartphones Mobile Medium*/
 @media only screen and (max-width: 375px) {
-    
-  }
+    #main{
+        width: 150%;
+        height: 950px;
+    }
+    .main-area{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+    }
+    .main-content{
+        width: 100% !important;
+        height: 400px !important;
+        margin-top: 120px !important;
+    }
+    .main-content .main-content-text{
+        width: 100%;
+        height: 70% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content-icons{
+        height: 20% !important;
+    }
+    .main-image{
+        width: 100% !important;
+        height: 400px !important;
+        margin-top: 0px !important;
+        display: flex;
+        justify-content: center !important;
+    }
+    .main-image .image{
+        width: 400px !important;
+    }
+    .emoji{
+        width: 24px;
+        left: 70% !important;
+        top: 4% !important;
+    }
+    .main-content-text h1{
+        font-size: 4rem;
+        margin-top: 0px !important;
+    }
+    .main-content-text h2{
+        font-size: 4.4rem;
+        margin-top: 3px;
+    }
+    .main-content-text h5{
+        font-size: 1.9rem;
+    }
+    .main-content-text p{
+        width: 80%;
+        text-align: center;
+    }
+    .hire-me{
+        padding: 6px 23px;
+        font-size: 1.6rem;
+    }
+    .icons i{
+        font-size: 3rem;
+    }
+    .html{
+        width: 11.5rem;
+        height: 3.8rem;
+        position: absolute;
+        top: 10px;
+        left: 340px;
+    }
+    .html i{
+        font-size: 2.1rem;
+        margin-top: 2px;
+    }
+    .html h3{
+        font-size: 1.9rem;
+        margin-bottom: 0px;
+    }
+    .css{
+        width: 10.5rem;
+        height: 3.8rem;
+        position: absolute;
+        top: 65px;
+        left: -50px;
+    }
+    .css i{
+        font-size: 2.1rem;
+        margin-top: 2px;
+    }
+    .css h3{
+        font-size: 1.9rem;
+    }
+    .javascript{
+        width: 17rem;
+        height: 3.8rem;
+        position: absolute;
+        bottom: 30px;
+        left: 240px;
+    }
+    .javascript i{
+        font-size: 2.1rem;
+        margin-top: 0px;
+    }
+    .javascript h3{
+        font-size: 1.9rem;
+    }
+}
 
 /* ---------------- Smartphones Mobile Large ---------------- */
 @media(min-width: 376px) and (max-width: 500px) {
-    
+    #main{
+        width: 150%;
+        height: 950px;
+    }
+    .main-area{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+    }
+    .main-content{
+        width: 100% !important;
+        height: 400px !important;
+        margin-top: 120px !important;
+    }
+    .main-content .main-content-text{
+        width: 100%;
+        height: 70% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content-icons{
+        height: 20% !important;
+    }
+    .main-image{
+        width: 100% !important;
+        height: 400px !important;
+        margin-top: 0px !important;
+        display: flex;
+        justify-content: center !important;
+    }
+    .main-image .image{
+        width: 400px !important;
+    }
+    .emoji{
+        width: 24px;
+        left: 68% !important;
+        top: 4% !important;
+    }
+    .main-content-text h1{
+        font-size: 4rem;
+        margin-top: 0px !important;
+    }
+    .main-content-text h2{
+        font-size: 4.4rem;
+        margin-top: 3px;
+    }
+    .main-content-text h5{
+        font-size: 1.9rem;
+    }
+    .main-content-text p{
+        width: 80%;
+        text-align: center;
+    }
+    .hire-me{
+        padding: 6px 23px;
+        font-size: 1.6rem;
+    }
+    .icons i{
+        font-size: 3rem;
+    }
+    .html{
+        width: 11.5rem;
+        height: 3.8rem;
+        position: absolute;
+        top: 10px;
+        left: 340px;
+    }
+    .html i{
+        font-size: 2.1rem;
+        margin-top: 2px;
+    }
+    .html h3{
+        font-size: 1.9rem;
+        margin-bottom: 0px;
+    }
+    .css{
+        width: 10.5rem;
+        height: 3.8rem;
+        position: absolute;
+        top: 65px;
+        left: -50px;
+    }
+    .css i{
+        font-size: 2.1rem;
+        margin-top: 2px;
+    }
+    .css h3{
+        font-size: 1.9rem;
+    }
+    .javascript{
+        width: 17rem;
+        height: 3.8rem;
+        position: absolute;
+        bottom: 30px;
+        left: 240px;
+    }
+    .javascript i{
+        font-size: 2.1rem;
+        margin-top: 0px;
+    }
+    .javascript h3{
+        font-size: 1.9rem;
+    }
 }
 
 /* ---------------- Tablet ---------------- */
 @media(min-width: 501px) and (max-width: 774px) {
     #main{
-        width: 100vwgit;
+        width: 100vw;
         height: 950px;
-        background-color: aquamarine;
     }
     .main-area{
         width: 100%;
