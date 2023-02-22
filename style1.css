@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=K2D:wght@100;200;300;400;500;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --BlackColor:rgb(14, 14, 14);
+    --WhiteColor:rgb(255, 255, 255);
+    --TolightgrayColor:rgb(226, 226, 226);
+    --LightgrayColor:rgb(170, 170, 170);
+    --GrayColor:rgb(90, 90, 90);
+    --MediumgrayColor:rgb(61, 61, 61);
+    --DarkgrayColor:rgb(39, 39, 39);
+    --PrimaryColor:#ffd000;
+    --SecondaryColor:#ffbb00;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #ffd519 40%, #ffc31f 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(to top, #ffd519 40%, #ffc31f 100%);
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+}
+header::before{
+    content: '';
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+nav{
+    height: 70px;
+    position: relative;
+}
+#navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* For Menu Icon */
+.menu-icon{
+    border: none;
+    background-color: #fce687;
+    font-size: 3rem;
+    margin: 0%;
+    width: 40px;
+    height: 40px;
+    display: none;
+    color: var(--GrayColor);
+    border-radius: 5px;
+}
+
+/* For LOGO Image & Text */
+.logo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.logo img{
+    width: 45px;
+}
+.logo h1{
+    height: 34px;
+    font-size: 3.6rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: var(--GrayColor);
+}
+.logo h1 span{
+    color: var(--PrimaryColor);
+}
+
+/* For Navigations */
+.navigation{
+    width: 650px;
+    height: 28px;
+    position: relative;
+    top: 2px;
+    right: 17px;
+}
+.navigation ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navigation ul li{
+    margin: auto;
+    position: relative;
+}
+.navigation ul li::before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--PrimaryColor);
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+.navigation ul li:hover::before{
+    transform: scaleX(1);
+}
+.navigation ul li a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    color: var(--GrayColor);
+    font-weight: bold;
+}
+
+/* For Resume Button */
+.resume{
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to bottom, #ffd000 10%, #ffbb00 100%);
+    font-family: 'Varela Round', sans-serif;
+    padding: 5px 12px;
+    font-size: 1.65rem;
+    color: var(--WhiteColor);
+    box-shadow: 0px 15px 20px 1px #fce687;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.resume:hover{
+    transform: scale(1.1);
+}
+.resume:active{
+    transform: scale(0.95);
+}
+
+/* For SideBar */
+.sidebar{
+    background: linear-gradient(to bottom right, rgb(70, 70, 70) 0%, var(--DarkgrayColor) 100%);
+    width: 260px;
+    height: 89vh;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    z-index: 10;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    transform: translate(-100%);
+    transition: 0.4s;
+}
+.show-sidebar{
+    transform: translate(0%);
+}
+.sidebar .navigate{
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    padding: 20px 20px 20px 10px;
+}
+.navigate .heading{
+    position: relative;
+    padding-left: 6px;
+}
+.heading h2{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--WhiteColor);
+}
+.heading h2 span{
+    color: var(--PrimaryColor);
+}
+.navigate-options{
+    width: 100%;
+    height: 90%;
+    padding: 1px 0px 0px 0px;
+}
+.home, .about, .services, .skills, .projects, .contact{
+    margin: 11px 0px;
+}
+.home{
+    width: 100%;
+    height: 13%; 
+}
+.home a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    background-color: var(--GrayColor);
+    transition: 0.1s;
+}
+.home a:hover{
+    background-color: var(--PrimaryColor);
+}
+.home i{
+    font-size: 2rem;
+}
+.home h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.about{
+    width: 100%;
+    height: 13%; 
+}
+.about a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.about a:hover{
+    background-color: var(--PrimaryColor);
+}
+.about i{
+    font-size: 2rem;
+}
+.about h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.services{
+    width: 100%;
+    height: 13%; 
+}
+.services a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.services a:hover{
+    background-color: var(--PrimaryColor);
+}
+.services i{
+    font-size: 2rem;
+}
+.services h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.skills{
+    width: 100%;
+    height: 13%; 
+}
+.skills a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.skills a:hover{
+    background-color: var(--PrimaryColor);
+}
+.skills i{
+    font-size: 2rem;
+}
+.skills h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.projects{
+    width: 100%;
+    height: 13%; 
+}
+.projects a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.projects a:hover{
+    background-color: var(--PrimaryColor);
+}
+.projects i{
+    font-size: 1.5rem;
+}
+.projects h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+.contact{
+    width: 100%;
+    height: 13%; 
+}
+.contact a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.contact a:hover{
+    background-color: var(--PrimaryColor);
+}
+.contact i{
+    font-size: 2rem;
+}
+.contact h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+
+
+/* Smartphones Mobile Medium*/
+@media only screen and (max-width: 375px) {
+    .logo img{
+        width: 40px;
+    }
+    .logo h1{
+        height: 34px;
+        font-size: 3.4rem;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        color: var(--GrayColor);
+    }
+    .navigation{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .resume{
+        font-size: 1.4rem;
+    }
+    .sidebar{
+        width: 210px;
+    }
+    .sidebar .navigate{
+        width: 100%;
+        height: 65%;
+        position: absolute;
+        padding: 20px 20px 20px 10px;
+    }
+    .navigate-options{
+        width: 100%;
+        height: 80%;
+        padding: 1px 0px 0px 0px;
+    }   
+    .heading h2{
+        font-size: 2.2rem;
+    }
+    .home, .about, .services, .skills, .projects, .contact{
+        margin: 12px 0px;
+    }
+    .home a,.contact a,.about a,.services a,.skills a, .projects a{
+        padding: 5px 5px 8px 7px;
+        gap: 15px;
+    }
+    .home i,.contact i,.about i,.services i,.skills i, .projects i{
+        font-size: 1.7rem;
+    }
+    .home h5,.contact h5,.about h5,.services h5,.skills h5, .projects h5{
+        font-size: 1.6rem;
+    }
+  }
+
+/* Smartphones Mobile Large*/
+@media(min-width: 376px) and (max-width: 500px) {
+    .logo img{
+        width: 40px;
+    }
+    .logo h1{
+        height: 34px;
+        font-size: 3.4rem;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        color: var(--GrayColor);
+    }
+    .navigation{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        margin-top: 3px;
+    }
+    .resume{
+        font-size: 1.4rem;
+    }
+    .sidebar{
+        width: 210px;
+    }
+    .sidebar .navigate{
+        width: 100%;
+        height: 65%;
+        position: absolute;
+        padding: 20px 20px 20px 10px;
+    }
+    .navigate-options{
+        width: 100%;
+        height: 80%;
+        padding: 1px 0px 0px 0px;
+    }   
+    .heading h2{
+        font-size: 2.2rem;
+    }
+    .home, .about, .services, .skills, .projects, .contact{
+        margin: 12px 0px;
+    }
+    .home a,.contact a,.about a,.services a,.skills a, .projects a{
+        padding: 5px 5px 8px 7px;
+        gap: 15px;
+    }
+    .home i,.contact i,.about i,.services i,.skills i, .projects i{
+        font-size: 1.7rem;
+    }
+    .home h5,.contact h5,.about h5,.services h5,.skills h5, .projects h5{
+        font-size: 1.6rem;
+    }
+  }
+
+  /* Tablet */
+  @media(min-width: 501px) and (max-width: 774px) {
+    .navigation{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #navbar{
+        width: 93%;
+    }
+    .menu-icon{
+        display: block;
+        background-color: #fce687;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar{
+        width: 240px;
+    }
+    .sidebar .navigate{
+        width: 100%;
+        height: 65%;
+        position: absolute;
+        padding: 20px 20px 20px 10px;
+    }
+    .navigate-options{
+        width: 100%;
+        height: 85%;
+        padding: 1px 0px 0px 0px;
+    }
+    .resume{
+        font-size: 1.6rem;
+    }   
+  }
+
+  /* Small Laptop */
+  @media(min-width: 775px) and (max-width: 992px) {
+     .navigation{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        margin-left: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar{
+        width: 240px;
+    }
+    .sidebar .navigate{
+        width: 100%;
+        height: 65%;
+        position: absolute;
+        padding: 20px 20px 20px 10px;
+    }
+    .navigate-options{
+        width: 100%;
+        height: 85%;
+        padding: 1px 0px 0px 0px;
+    }    
+    .resume{
+        font-size: 1.6rem;
+    }
+  }
+  /* Medium Laptop */
+  @media(min-width: 993px) and (max-width: 1200px) {
+    .navigation{
+        width: 600px;
+        height: 28px;
+        position: relative;
+        top: 2px;
+        right: 17px;
+    }
+    .navigation ul li a{
+        font-size: 1.7rem;
+    } 
+    .logo img{
+        width: 42px;
+    }
+    .logo h1{
+        font-size: 3.4rem;
+    }
+    .resume{
+        font-size: 1.6rem;
+    }
+    .sidebar{
+        display: none;
+    }
+  }
+
+  /* Widescreen */
+  @media(min-width: 1201px) {
+    .sidebar{
+        display: none;
+    }
+  }
+
+  /* Landscape */
+  /* @media(max-height: 500px) {
+    body {
+      background: orange;
+    }
+
+    #landscape h1 {
+      display: block;
+    }
+    
+  } */
