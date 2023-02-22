@@ -36,6 +36,8 @@ html{
     font-size: 10px;
 }
 body{
+    background-color: greenyellow;
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 header{
