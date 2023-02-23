@@ -18,7 +18,9 @@
 }
 
 ::-webkit-scrollbar{
-    width: 12px;
+    width: 11px;
+    position: absolute;
+    left: 20px;
 }
 ::-webkit-scrollbar-track{
     background: rgb(255, 255, 255);
@@ -36,17 +38,15 @@ html{
     font-size: 10px;
 }
 body{
-    background-color: greenyellow;
-    scroll-behavior: smooth;
+    background-color: var(--WhiteColor);
     overflow-x: hidden;
 }
 header{
-    background-color: transparent;
+    z-index: 100;
     position: fixed;
-    z-index: 1000;
     background-color: rgb(255, 255, 255);
 }
-/* header::before{
+header::before{
     content: '';
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -55,10 +55,9 @@ header{
     height: 100%;
     width: 100%;
     z-index: -1;
-} */
+}
 nav{
     height: 70px;
-    position: relative;
 }
 #navbar{
     width: 100%;
@@ -166,7 +165,7 @@ nav{
 /* For SideBar */
 .sidebar{
     background: linear-gradient(to bottom right, rgb(70, 70, 70) 0%, var(--DarkgrayColor) 100%);
-    width: 260px;
+    width: 100vw;
     height: 89vh;
     position: fixed;
     left: 0;
@@ -182,31 +181,43 @@ nav{
 }
 .sidebar .navigate{
     width: 100%;
-    height: 65%;
+    height: 100%;
     position: absolute;
-    padding: 20px 20px 20px 10px;
+    padding: 20px 30px 20px 20px;
 }
 .navigate .heading{
+    width: 100%;
+    height: 10%;
     position: relative;
-    padding-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading h2{
     font-family: 'Varela Round', sans-serif;
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.5px;
     color: var(--WhiteColor);
+    margin: 0%;
+    border-bottom: 3px solid var(--WhiteColor);
 }
 .heading h2 span{
     color: var(--PrimaryColor);
 }
 .navigate-options{
     width: 100%;
-    height: 90%;
-    padding: 1px 0px 0px 0px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .home, .about, .services, .skills, .projects, .contact{
-    margin: 14px 0px;
+    margin: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home{
     width: 100%;
@@ -216,11 +227,11 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
-    padding: 5px 5px 8px 5px;
     border-radius: 5px;
     background-color: var(--GrayColor);
     transition: 0.1s;
@@ -228,16 +239,11 @@ nav{
 .home a:hover{
     background-color: var(--PrimaryColor);
 }
-.home i{
-    font-size: 2rem;
-}
 .home h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
 .about{
@@ -248,27 +254,22 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
-    padding: 5px 5px 8px 5px;
     border-radius: 5px;
     transition: 0.1s;
 }
 .about a:hover{
-    background-color: var(--PrimaryColor);
-}
-.about i{
-    font-size: 2rem;
+    background-color: var(--SecondaryColor);
 }
 .about h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
 .services{
@@ -279,27 +280,21 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
-    padding: 5px 5px 8px 5px;
     border-radius: 5px;
     transition: 0.1s;
 }
 .services a:hover{
-    background-color: var(--PrimaryColor);
-}
-.services i{
-    font-size: 2rem;
+    background-color: var(--SecondaryColor);
 }
 .services h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
 .skills{
@@ -310,27 +305,21 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
-    padding: 5px 5px 8px 5px;
     border-radius: 5px;
     transition: 0.1s;
 }
 .skills a:hover{
-    background-color: var(--PrimaryColor);
-}
-.skills i{
-    font-size: 2rem;
+    background-color: var(--SecondaryColor);
 }
 .skills h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
 .projects{
@@ -341,27 +330,21 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
-    padding: 5px 5px 8px 5px;
     border-radius: 5px;
     transition: 0.1s;
 }
 .projects a:hover{
-    background-color: var(--PrimaryColor);
-}
-.projects i{
-    font-size: 1.5rem;
+    background-color: var(--SecondaryColor);
 }
 .projects h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
 .contact{
@@ -372,7 +355,7 @@ nav{
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
     color: var(--WhiteColor);
     text-decoration: none;
@@ -381,20 +364,47 @@ nav{
     transition: 0.1s;
 }
 .contact a:hover{
-    background-color: var(--PrimaryColor);
-}
-.contact i{
-    font-size: 2rem;
+    background-color: var(--SecondaryColor);
 }
 .contact h5{
     font-family: 'Nunito', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0px;
-    position: relative;
-    top: 2px;
 }
 
+.Resume-btn{
+    width: 100%;
+    height: 15%; 
+}
+.Resume-btn a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--WhiteColor);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.Resume-btn a button{
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to bottom, #ffd000 10%, #ffbb00 100%);
+    font-family: 'Varela Round', sans-serif;
+    padding: 7px 30px;
+    font-size: 2rem;
+    color: var(--WhiteColor);
+    transform: scale(1);
+    transition: 0.3s;
+}
+.Resume-btn a button:hover{
+    transform: scale(1.05);
+}
+.Resume-btn a button:active{
+    transform: scale(0.95);
+}
 
 
 
@@ -403,18 +413,15 @@ nav{
 
 /* Smartphones Mobile Medium*/
 @media only screen and (max-width: 375px) {
-    nav{
-        display: flex;
-        justify-content: flex-end;
+    .sidebar{
+        width: 100%;
+        height: 92%;
     }
-    #navbar{
-        width: 90% !important;
-    }
-    .logo{
-        margin-top: 5px;
+    .home h5,.about h5,.services h5,.contact h5,.projects h5,.skills h5{
+        font-size: 2.5rem;
     }
     .logo img{
-        width: 40px;
+        width: 42px;
     }
     .navigation{
         display: none;
@@ -426,52 +433,26 @@ nav{
         align-items: center;
         margin-top: 5px;
     }
-    .logo{
-        margin-top: 5px;
-    }
-    .sidebar{
-        width: 210px;
-    }
-    .sidebar .navigate{
-        width: 100%;
-        height: 65%;
-        position: absolute;
-        padding: 20px 20px 20px 10px;
-    }
-    .navigate-options{
-        width: 100%;
-        height: 80%;
-        padding: 1px 0px 0px 0px;
-    }   
-    .heading h2{
-        font-size: 2.2rem;
-    }
-    .home, .about, .services, .skills, .projects, .contact{
-        margin: 12px 0px;
-    }
-    .home a,.contact a,.about a,.services a,.skills a, .projects a{
-        padding: 5px 5px 8px 7px;
-        gap: 15px;
-    }
-    .home i,.contact i,.about i,.services i,.skills i, .projects i{
-        font-size: 1.7rem;
-    }
-    .home h5,.contact h5,.about h5,.services h5,.skills h5, .projects h5{
-        font-size: 1.6rem;
+    .resume{
+        display: none;
+    }  
+    .Resume-btn a button{
+        font-size: 2.8rem;
+        padding: 8px 30px;
     }
   }
 
 /* Smartphones Mobile Large*/
 @media(min-width: 376px) and (max-width: 500px) {
-    nav{
-        display: flex;
-        justify-content: flex-end;
+    .sidebar{
+        width: 100%;
+        height: 92%;
     }
-    #navbar{
-        width: 90%;
+    .home h5,.about h5,.services h5,.contact h5,.projects h5,.skills h5{
+        font-size: 2.5rem;
     }
     .logo img{
-        width: 40px;
+        width: 42px;
     }
     .navigation{
         display: none;
@@ -482,53 +463,24 @@ nav{
         justify-content: center;
         align-items: center;
         margin-top: 5px;
-    }
-    .logo{
-        margin-top: 5px;
-    }
-    .sidebar{
-        width: 210px;
-    }
-    .sidebar .navigate{
-        width: 100%;
-        height: 65%;
-        position: absolute;
-        padding: 20px 20px 20px 10px;
-    }
-    .navigate-options{
-        width: 100%;
-        height: 80%;
-        padding: 1px 0px 0px 0px;
     }   
-    .heading h2{
-        font-size: 2.2rem;
-    }
-    .home, .about, .services, .skills, .projects, .contact{
-        margin: 12px 0px;
-    }
-    .home a,.contact a,.about a,.services a,.skills a, .projects a{
-        padding: 5px 5px 8px 7px;
-        gap: 15px;
-    }
-    .home i,.contact i,.about i,.services i,.skills i, .projects i{
-        font-size: 1.7rem;
-    }
-    .home h5,.contact h5,.about h5,.services h5,.skills h5, .projects h5{
-        font-size: 1.6rem;
+    .resume{
+        display: none;
+    }  
+    .Resume-btn a button{
+        font-size: 2.8rem;
+        padding: 8px 30px;
     }
   }
 
   /* Tablet */
   @media(min-width: 501px) and (max-width: 774px) {
+    .sidebar{
+        width: 100%;
+        height: 88%;
+    }
     .navigation{
         display: none;
-    }
-    nav{
-        display: flex;
-        justify-content: flex-end;
-    }
-    #navbar{
-        width: 93%;
     }
     .menu-icon{
         display: block;
@@ -540,36 +492,19 @@ nav{
     .logo{
         margin-top: 5px;
     }
-    .sidebar{
-        width: 240px;
-    }
-    .sidebar .navigate{
-        width: 100%;
-        height: 65%;
-        position: absolute;
-        padding: 20px 20px 20px 10px;
-    }
-    .navigate-options{
-        width: 100%;
-        height: 85%;
-        padding: 1px 0px 0px 0px;
-    }
     .resume{
-        font-size: 1.6rem;
+        display: none;
     }   
   }
 
   /* Small Laptop */
   @media(min-width: 775px) and (max-width: 992px) {
+    .sidebar{
+        width: 100%;
+        height: 88%;
+    }
      .navigation{
         display: none;
-    }
-    nav{
-        display: flex;
-        justify-content: flex-end;
-    }
-    #navbar{
-        width: 94%;
     }
     .menu-icon{
         display: block;
@@ -581,25 +516,8 @@ nav{
         width: 35px;
         height: 35px;
     }
-    .logo{
-        margin-top: 5px;
-    }
-    .sidebar{
-        width: 240px;
-    }
-    .sidebar .navigate{
-        width: 100%;
-        height: 65%;
-        position: absolute;
-        padding: 20px 20px 20px 10px;
-    }
-    .navigate-options{
-        width: 100%;
-        height: 85%;
-        padding: 1px 0px 0px 0px;
-    }    
     .resume{
-        font-size: 1.6rem;
+        display: none;
     }
   }
   /* Medium Laptop */

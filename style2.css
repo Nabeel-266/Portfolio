@@ -4,7 +4,6 @@
 }
 #main{
     background-color: var(--WhiteColor);
-    width: 100vw;
     height: 100vh;
 }
 .main-area{
@@ -126,7 +125,7 @@
 .icons i{
     font-size: 3.5rem;
     color: var(--DarkgrayColor);
-    transition: 0.2s;
+    transition: 0.25s;
     transform: scale(1);
 }
 .icons i:hover{
@@ -630,7 +629,6 @@
     }
     .main-content-text h1{
         font-size: 4rem;
-        margin-top: 0px !important;
     }
     .main-content-text h2{
         font-size: 4.4rem;
